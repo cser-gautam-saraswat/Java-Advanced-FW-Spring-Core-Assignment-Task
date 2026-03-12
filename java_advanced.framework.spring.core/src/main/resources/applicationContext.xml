@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+
+	<bean
+		class="com.capgemini.java_advanced.framework.spring.core.entity.Project"
+		id="proj">
+		<constructor-arg index="0" value="1" />
+		<constructor-arg index="1" value="chatbot" />
+		<constructor-arg index="2" value="chatbot desc" />
+
+	</bean>
+
+	<bean
+		class="com.capgemini.java_advanced.framework.spring.core.entity.Student"
+		id="student">
+		<property name="id" value="1" />
+		<property name="name" value="Gautam" />
+		<property name="mailId" value="ga@gmail.com" />
+		<property name="contactNumber" value="7889654123" />
+		<property name="project" ref="proj" />
+
+	</bean>
+
+</beans>
